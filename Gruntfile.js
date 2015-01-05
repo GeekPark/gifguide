@@ -4,7 +4,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9000, //run on port 9000
-          open: true //open browser
+          open: false //open browser
         }
       }
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       options: {},
       dist: {
         files: {
-          'assets/javascript/gifguide.min.js': 'src/gifguide.js'
+          'assets/javascript/gifguide.min.js': ['src/jquery.min.js','src/idangerous.swiper.min.js','src/gifguide.js']
         }
       }
     },
@@ -34,6 +34,28 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      target: {
+        files: {
+          'assets/css/gifguide.min.css': ['assets/css/normalize.css', 'assets/css/gifguide.css']
+        }
+      }
+    },
+    imagemin: {
+      dist: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true,
+          interlaced: true
+        },
+        files: [{
+        expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{png,jpg,jpeg}'],
+          dest: 'assets/images/'
+        }]
+      }
+    },
     watch:{
       sass:{
         files: 'src/gifguide.scss',
@@ -42,6 +64,10 @@ module.exports = function(grunt) {
       js:{
         files: 'src/gifguide.js',
         tasks:['uglify']
+      },
+      images: {
+        files: ['src/images/*.*'],
+        tasks:['imagemin']
       },
       all: {
         files: ['src/*.*','*.html'],
@@ -54,9 +80,11 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'connect', 'watch']);
+  grunt.registerTask('default', ['uglify', 'sass', 'cssmin', 'autoprefixer', 'connect', 'watch']);
 }
