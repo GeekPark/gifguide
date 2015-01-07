@@ -58,7 +58,7 @@ $(function() {
   pageNav(pageSwiper);
 
   // 测试用自动跳转到
-  pageSwiper.swipeTo( 1, 400, false);
+  // pageSwiper.swipeTo( 1, 400, false);
 
   // 载入日程页面
   initSchedule();
