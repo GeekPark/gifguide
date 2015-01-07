@@ -1,0 +1,110 @@
+html,body {
+  height: 100%;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+.hidden {
+  .hidden {
+    display: none;
+  }
+  display: none;
+}
+
+.gifguide {
+  font-family: Arial,"DIN Next Ultra Light","Helvetica Neue",Helvetica, "Lantinghei SC","Hiragino Sans GB",STHeiti, "Noto Sans S Chinese", "Microsoft Yahei", "Microsoft Sans Serif", "WenQuanYi Micro Hei",sans-serif;
+  overflow: hidden;
+  background: #fff url('../images/bg.jpg') center center no-repeat;
+  margin: 0 auto;
+  position: relative;
+  .page {
+    text-align: center;
+  }
+  .page-title {
+    text-align: center;
+    color: #333;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: normal;
+    /* padding-bottom: 4px;
+    border-bottom: 3px solid #c70062; */
+    /* &:before {
+      content: '';
+      display: inline-block;
+      height: 24px;
+      position: relative;
+      left: -5px;
+      top: 2px;
+      border-left: 5px solid #a34dab;
+    } */
+  }
+  .backbtn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .9);
+    opacity: .8;
+    color: #bbb;
+    z-index: 10;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    &:hover {
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.56);
+    }
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    &.hidden {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  .page{
+    $border-color: rgba(0, 0, 0, .3);
+    .page-content {
+      overflow-y: scroll;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      box-sizing: border-box;
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+    .block {
+      width: 95%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      text-align: left;
+      color: #004749;
+      padding: 10px 15px;
+      padding-top: 20px;
+    }
+    .block-title {
+      border-left: 4px solid #C81717;
+      font-weight: bold;
+      padding-left: 8px;
+      margin-top: 0;
+      margin-bottom: 2px;
+    }
+    .block-content {
+      padding-left: 12px;
+    }
+    .item {
+    }
+  } // .page end
+}
+

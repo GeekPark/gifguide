@@ -1,0 +1,64 @@
+.home {
+  width: 100%;
+  text-align: center;
+  left: 0;
+  .banner {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .countdown {
+    border: 1px solid #7EE1E4;
+    border-radius: 5px;
+    background-color: #CA1A21;
+    width: 120px;
+    color: #FCBEC1;
+    opacity: .9;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+  .countdown-day {
+    font-size: 4rem;
+    color: #FCBEC1;
+  }
+  .location {
+    text-align: center;
+    color: #fff;
+    margin: 10px;
+  }
+  // 导航
+  .nav {
+    margin: auto;
+    text-align: center;
+    ul {
+      height: 100px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    li {
+      display: inline-block;
+      width: 30%;
+      margin-bottom: 10px;
+      &.origin-link a {
+        background-color: rgba( 33, 128, 130, 0.3 );
+      }
+    }
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      background-color: rgba( 33, 128, 130, 0.6 );
+      border: 1px solid #7EE1E4;
+      color: #F7F7F7;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

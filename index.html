@@ -12,32 +12,161 @@
   <link rel="stylesheet" href="assets/css/gifguide.min.css">
 </head>
 <body class="gifguide">
-  <!--   page home end  -->
-  <section class="page home">
-    <img class="banner" src="assets/images/banner.png" alt="">
-    <div class="countdown">
-      <div class="countdown-title">
-        距大会开幕
-      </div>
-      <div class="countdown-day" id="countdown-day">13</div>
-      <div class="countdown-des">1月17~18日</div>
-    </div>
-    <p class="location">
-      751 D・PARK<br>
-      中国时尚设计广场79罐
-    </p>
-  </section>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- 首屏 -->
+      <section class="swiper-slide page home">
+        <img class="banner" src="assets/images/banner.png" alt="">
+        <div class="countdown" id="countdown-area">
+          <div class="countdown-title" id="countdown-title">
+            距大会开幕
+          </div>
+          <div class="countdown-day" id="countdown-day">0</div>
+          <div class="countdown-des">1月17~18日</div>
+        </div>
+        <p class="location">
+          751 D・PARK<br>
+          中国时尚设计广场79罐
+        </p>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="javascript:;" data-target="1">日程安排</a></li>
+            <li><a href="javascript:;" data-target="2">交通指南</a></li>
+            <li><a href="javascript:;" data-target="3">周边吃住</a></li>
+            <li><a href="javascript:;" data-target="4">注意事项</a></li>
+            <li class="origin-link"><a href="javascript:;">存至本地</a></li>
+            <li class="origin-link"><a href="javascript:;">大会官网</a></li>
+          </ul>
+        </nav>
+      </section>
 
-  <nav class="nav">
-    <ul>
-      <li><a href="javascript:;">大会官网</a></li>
-      <li><a href="javascript:;">购票通道</a></li>
-      <li><a href="javascript:;">日程安排</a></li>
-      <li><a href="javascript:;">一键导航</a></li>
-      <li><a href="javascript:;">周边吃住</a></li>
-      <li><a href="javascript:;">注意事项</a></li>
-    </ul>
-  </nav>
+      <!-- 日程安排 -->
+      <section class="swiper-slide page schedule">
+        <h2 class="page-title">日程安排</h2>
+        <div class="switch">
+          <a href="javascript:;" class="switchbtn on" data-type="main" id="main-schedule">主论坛</a>
+          <a href="javascript:;" class="switchbtn" data-type="minor" id="minor-schedule">分论坛</a>
+        </div>
+        <div class="page-content" id="page-content">
+          <div class="block hidden" id="schedule-template">
+            <h3 class="block-title">
+              <span class="agenda-title">The Change Maker——年度商业变量论坛</span>
+              <span class="time js-agenda-date">第一天上午</span>
+            </h3>
+
+            <div class="block-content" id="speech-template">
+              <div class="speech">
+                <div class="time-area">
+                  <span class="time start">09:00</span> -
+                  <span class="time start">09:10</span>
+                </div>
+                <div class="content">
+                  <div class="speech-title">开场balabala</div>
+                  <div class="guest">
+                    <span class="company">极客公园</span>
+                    <span class="guest-title">创始人</span>
+                    <span class="author">张鹏</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 交通 -->
+      <section class="swiper-slide page traffic">
+        <h2 class="page-title">交通指南</h2>
+        <div class="page-content">
+
+          <div class="block">
+            <h3 class="block-title">地点</h3>
+            <div class="block-content">
+              酒仙桥路4号751D·PARK北京时尚设计广场内
+            </div>
+          </div>
+
+          <div class="block">
+            <h3 class="block-title">专车接送</h3>
+            <div class="block-content">
+              本次大会另有「易到用车」免费专车接送，点击「报名」即可申请
+            </div>
+          </div>
+
+          <div class="block">
+            <h3 class="block-title">公共交通</h3>
+            <div class="block-content">
+              公交 403 路、629 路 - 北京电机总厂站，或公交 909 路、688 路、955 路、418 路、946 路、402 路 - 彩虹路站，下车步行 300 米左右可到达。
+            </div>
+          </div>
+
+          <div class="block">
+            <h3 class="block-title">自驾</h3>
+            <div class="block-content">
+              园区内有停车位。注：高峰期避免走大山子路口。
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- 周边 -->
+      <section class="swiper-slide page circum">
+        <h2 class="page-title">周边吃住</h2>
+        <div class="page-content">
+          <div class="block">
+            <h3 class="block-title">优惠券</h3>
+            <div class="block-content">
+              本次大会现场会提供会员卡，在园区内已合作商家消费时，可以享受优惠。
+            </div>
+          </div>
+
+          <div class="block">
+            <h3 class="block-title">餐饮</h3>
+            <div class="block-content">
+              751D·PARK 北京时尚设计广场以及 798 艺术区之中和周边有诸多中西餐厅、酒吧、茶餐厅等，价格适中，有多样选择。
+            </div>
+          </div>
+
+          <div class="block">
+            <h3 class="block-title">住</h3>
+            <div class="block-content">
+              园区内的住宿比较贵。建议选择周边地区。
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 注意事项 -->
+      <section class="swiper-slide page tip">
+        <h2 class="page-title">注意事项</h2>
+        <div class="block">
+          <h3 class="block-title">携带身份证领取同传设备</h3>
+          <div class="block-content">
+            因为部分演讲有外籍嘉宾。所以务必带上你的身份证件用于领取同传设备
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">务必携带好您的入场凭证</h3>
+          <div class="block-content">
+            <p>在大会成功购票的用户应该会收到对应的入场凭证。不论是二维码还是那段文字都可以用来入场。</p>
+            <p>我们在现场会设置咨询台，如果在当时有任何疑问，可以在现场询问。</p>
+            <p>如果现在你还有什么不明白，请邮件：gif@geekpark.net</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <a href="javascript:;" class="backbtn hidden" id="backhome"><</a>
+
+
 
   <script src="assets/javascript/gifguide.min.js"></script>
 </body>
