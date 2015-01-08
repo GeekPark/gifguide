@@ -169,6 +169,8 @@ function initSchedule () {
 
 
         // 对每个Speech的内容动态修改
+        $speechDOM.find('.js-time-start').text(speech.start_at);
+        $speechDOM.find('.js-time-end').text(speech.end_at);
         $speechDOM.find('.speech-title').html(speech.name || '');
         $speechDOM.find('.company').html(speech.company || '');
         $speechDOM.find('.guest-title').html(speech.title || '');
