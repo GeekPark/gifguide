@@ -741,6 +741,11 @@ li {
   }
 }
 
+.gifguide.imagepage {
+  height: auto;
+  overflow-y: scroll;
+}
+
 .gifguide .schedule {
   .switch {
     position: relative;

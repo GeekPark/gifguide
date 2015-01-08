@@ -587,6 +587,10 @@ li {
       .home .nav a:hover {
         opacity: 0.8; }
 
+.gifguide.imagepage {
+  height: auto;
+  overflow-y: scroll; }
+
 .gifguide .schedule .switch {
   position: relative;
   z-index: 11; }

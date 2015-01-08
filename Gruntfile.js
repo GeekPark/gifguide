@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       options: {},
       dist: {
         files: {
-          'assets/javascript/gifguide.min.js': ['src/js/jquery.min.js', 'src/js/vendor/*.js', 'src/js/gifguide.js']
+          'assets/javascript/gifguide.min.js': ['src/js/jquery.min.js', 'src/js/vendor/*.js', 'src/js/gifguide.js', 'src/js/generimage.js']
         }
       }
     },
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
         }
       },
       js:{
-        files: 'src/**/*.js',
+        files: ['src/js/gifguide.js', 'src/js/generimage.js'],
         tasks:['uglify'],
         options: {
           livereload: true,
