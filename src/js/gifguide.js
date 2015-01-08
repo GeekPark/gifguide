@@ -203,6 +203,10 @@ function updateAgendaUI (type) {
     }
   });
 
+  // 切换完之后顺便让滚动到最顶部
+  // $('.schedule .block.'+ type).eq(0);
+  $('.schedule #page-content').scrollTop(0);
+
 }
 
 function getAgendaTime (i) {
