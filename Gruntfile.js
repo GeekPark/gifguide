@@ -28,7 +28,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'assets/css/gifguide.css': 'src/gifguide.scss'
+          'src/gifguide.css': 'src/gifguide.scss'
         }
       }
     },
@@ -37,13 +37,13 @@ module.exports = function(grunt) {
         cascade: true
       },
       single_file: {
-        src: 'assets/css/gifguide.css'
+        src: 'src/gifguide.css'
       }
     },
     cssmin: {
       target: {
         files: {
-          'assets/css/gifguide.min.css': ['assets/css/gifguide.css']
+          'assets/css/gifguide.min.css': ['src/gifguide.css']
         }
       }
     },
@@ -120,6 +120,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['uglify', 'concat', 'sass', 'autoprefixer', 'cssmin', 'connect', 'watch']);
+  grunt.registerTask('default', ['imagemin', 'uglify', 'concat', 'sass', 'autoprefixer', 'cssmin', 'connect', 'watch']);
   grunt.registerTask('deploy', ['clean', 'copy:deploy']);
 }
