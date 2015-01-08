@@ -94,6 +94,19 @@ module.exports = function(grunt) {
           interval: 500
         }
       }
+    },
+    clean: ["deploy/"],
+    copy: {
+      deploy: {
+        files: [
+          // includes files within path
+          {
+            expand: true,
+            src: ['assets/**', '*.html'],
+            dest: 'deploy/'
+          }
+        ],
+      },
     }
   });
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -103,7 +116,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('default', ['uglify', 'concat', 'sass', 'autoprefixer', 'cssmin', 'connect', 'watch']);
+  grunt.registerTask('deploy', ['clean', 'copy:deploy']);
 }
