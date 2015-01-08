@@ -562,6 +562,10 @@ th {
 
 html,body {
   height: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
   font-size: 16px;
 }
 a {
@@ -676,6 +680,7 @@ li {
   text-align: center;
   left: 0;
   .banner {
+    max-width: 640px;
     width: 100%;
     img {
       width: 100%;
