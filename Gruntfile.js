@@ -102,7 +102,7 @@ module.exports = function(grunt) {
           // includes files within path
           {
             expand: true,
-            src: ['assets/**', '*.html'],
+            src: ['assets/**', '*.html', 'favicon.ico'],
             dest: 'deploy/'
           }
         ],
