@@ -1,4 +1,56 @@
 .gifguide.imagepage {
   height: auto;
+  background: #01bdc8;
   overflow-y: scroll;
+  .qrcode {
+    text-align: center;
+    img {
+      padding: 8px;
+      width: 40%;
+      background: rgba( 255, 255, 255, .6);
+      border-radius: 5px;
+    }
+  }
+  .yourqr-tip {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+  .page-title {
+    display: inline-block;
+    padding: 10px 40px;
+    background: #C81717;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: 1px solid rgba(18, 18, 18, 0.65);
+  }
+  .schedule-title span {
+    font-weight: normal;
+    display: inline-block;
+    padding: 5px 25px;
+    background: #66DDDF;
+    border-radius: 5px;
+    color: #0E5A5C;
+    border: 1px solid #088789;
+  }
+  .schedule .block-content .speech {
+    margin: 0;
+  }
+  .time-area .time:last-child {
+    display: none;
+  }
+  .schedule .block-content {
+    .time-area {
+      width: 20%;
+    }
+    .content {
+      width: 80%;
+    }
+  }
+  .copyright {
+    text-align: center;
+    padding: 10px;
+    color: #4A5D5E;
+    font-size: 0.9rem;
+  }
 }

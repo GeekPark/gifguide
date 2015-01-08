@@ -435,7 +435,6 @@ html, body {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
   font-size: 16px; }
 
 a {
@@ -589,7 +588,47 @@ li {
 
 .gifguide.imagepage {
   height: auto;
+  background: #01bdc8;
   overflow-y: scroll; }
+  .gifguide.imagepage .qrcode {
+    text-align: center; }
+    .gifguide.imagepage .qrcode img {
+      padding: 8px;
+      width: 40%;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 5px; }
+  .gifguide.imagepage .yourqr-tip {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: normal; }
+  .gifguide.imagepage .page-title {
+    display: inline-block;
+    padding: 10px 40px;
+    background: #C81717;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: 1px solid rgba(18, 18, 18, 0.65); }
+  .gifguide.imagepage .schedule-title span {
+    font-weight: normal;
+    display: inline-block;
+    padding: 5px 25px;
+    background: #66DDDF;
+    border-radius: 5px;
+    color: #0E5A5C;
+    border: 1px solid #088789; }
+  .gifguide.imagepage .schedule .block-content .speech {
+    margin: 0; }
+  .gifguide.imagepage .time-area .time:last-child {
+    display: none; }
+  .gifguide.imagepage .schedule .block-content .time-area {
+    width: 20%; }
+  .gifguide.imagepage .schedule .block-content .content {
+    width: 80%; }
+  .gifguide.imagepage .copyright {
+    text-align: center;
+    padding: 10px;
+    color: #4A5D5E;
+    font-size: 0.9rem; }
 
 .gifguide .schedule .switch {
   position: relative;

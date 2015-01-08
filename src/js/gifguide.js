@@ -1,5 +1,12 @@
 $(function() {
-  if(!$('body').hasClass('gifguide') || $('body').hasClass('imagepage')) {
+  if(!$('body').hasClass('gifguide')) {
+    return false;
+  }
+
+  // 载入日程页面
+  initSchedule();
+
+  if($('body').hasClass('imagepage')) {
     return false;
   }
 
@@ -56,13 +63,6 @@ $(function() {
 
   // 负责处理各种导航按钮
   pageNav(pageSwiper);
-
-  // 测试用自动跳转到
-  // pageSwiper.swipeTo( 1, 400, false);
-
-  // 载入日程页面
-  initSchedule();
-
 
   function changeDay () {
     // 此处不牵扯真正的日期计算，仅仅是当月日期做减法
@@ -130,7 +130,6 @@ $(function() {
   function initSchedule () {
     var $template = $('#schedule-template');
 
-
     // 监听切换按钮
     $('#main-schedule,#minor-schedule').on('click', function() {
       $('.switch .on').removeClass('on');
@@ -191,9 +190,6 @@ $(function() {
     }
     // 执行替换
   }
-
-  // 将此函数扩展给其他页面使用
-  window.initSchedule = initSchedule();
 
   // 执行主/分会场的UI自更新
   function updateAgendaUI (type) {
