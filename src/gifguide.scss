@@ -584,6 +584,9 @@ li {
   }
   display: none;
 }
+.visible-miniphone {
+  display: none;
+}
 
 .gifguide {
   font-family: Arial,"DIN Next Ultra Light","Helvetica Neue",Helvetica, "Lantinghei SC","Hiragino Sans GB",STHeiti, "Noto Sans S Chinese", "Microsoft Yahei", "Microsoft Sans Serif", "WenQuanYi Micro Hei",sans-serif;
@@ -737,6 +740,20 @@ li {
         opacity: .8;
       }
     }
+  }
+}
+
+
+@media (max-height: 420px) {
+  .visible-miniphone {
+    display: block;
+  }
+  .hidden-miniphone {
+    display: none;
+  }
+  .miniphone-time {
+    font-size: 1.2rem;
+    color: #fff;
   }
 }
 
